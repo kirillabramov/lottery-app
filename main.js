@@ -18,20 +18,45 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(let i = 0; i < document.querySelectorAll('.edit-button').length; i++){
                 document.querySelectorAll('.edit-button')[i].addEventListener('click', editParticipant);
             }
-            acceptBtn.removeEventListener('click', handleEditSubmition);
+           
     });
-    lotteryBtn.addEventListener('click', () => {
+    lotteryBtn.addEventListener('click', (e) => {
+
         let listOfParticipants = document.querySelectorAll('.name-lottery');
         if(listOfParticipants.length < 2){
             alert('not enough participants');
         }
         else{
            let lotteryWinner = random(listOfParticipants);
-            winnersList.innerHTML = 'Our winner is: ' + '<span class="winner__text">' 
-            +lotteryWinner.innerHTML+ '</span>' 
-            +'<p>Congrats!</p>';
+           let arrayListOfParticipants = Array.prototype.slice.call(listOfParticipants);
+           let index = arrayListOfParticipants.indexOf(lotteryWinner);
+
+            if(index !== -1 ) 
+            {
+                arrayListOfParticipants.splice(index, 1);
 
 
+                if (e.currentTarget.dataset.triggered) {
+
+
+
+                    winnersList.innerHTML += '<span class="winner__text">' 
+                    + ', ' + listOfParticipants[index].innerHTML+ '</span>' ;
+                    listOfParticipants[index].parentNode.parentNode.removeChild(lotteryWinner.parentNode);
+                    listOfParticipants = arrayListOfParticipants;
+                    return;
+
+                }
+
+
+
+                e.currentTarget.dataset.triggered = true;
+                winnersList.innerHTML = 'Our winner is: ' + '<span class="winner__text">' +listOfParticipants[index].innerHTML+ '</span>' ;
+                listOfParticipants[index].parentNode.parentNode.removeChild(lotteryWinner.parentNode);
+                listOfParticipants = arrayListOfParticipants;
+
+            }
+            
         }
     });
 
