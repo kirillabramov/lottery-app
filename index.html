@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lottery</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+
+
+    <div class="wrapper">
+        <div class="registrationForm" >
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                                <form action="#" id="regForm">
+                                        <div class="input__field">
+                                            <input type="text" placeholder="Name" required id="name" class="form-control form-control-lg">
+                                            <div class="error"></div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input type="text" placeholder="Surname" required id="surname" class="form-control form-control-lg">
+                                            <div class="error"></div>
+                                        </div>
+                                        <div class="input__field">
+                                                <input type="email" placeholder="Email" required id="email" class="form-control form-control-lg">
+                                                <div class="error"></div>
+                                        </div>
+                                        <div class="input__field">
+                                                <input type="tel" placeholder="Phone" id="phone" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="input__field">
+                                        <input type="submit" value="Save" class="btn btn-primary submit-btn">
+                                        <input type="submit" value="Accept" class="btn btn-success edit-btn">
+                                        <input type="submit" value="Decline" class="btn btn-danger decline-edit-btn">
+                                        </div>
+                                    </form>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="winners"></div>
+                            <button class="new-winner btn btn-primary">New winner</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <tr>            
+                             <td class="name-lottery">Kirill</td>           
+                              <td class="surname-lottery">Abramov</td>            
+                             <td class="email-lottery">sobka@gmail.com</td>            
+                             <td class="phone-lottery">3123131</td>       
+                            <td> <button class="btn btn-info edit-button">Edit</button> </td>    
+                        </tr>
+                        <tr>            
+                                <td class="name-lottery">Danil</td>            
+                                <td class="surname-lottery">Sid</td>            
+                                <td class="email-lottery">random@gmail.com</td>            
+                                <td class="phone-lottery">412313123</td>   
+                                <td><button class="btn btn-info edit-button">Edit</button>  </td>         
+                        </tr>
+                        <tr>            
+                                <td class="name-lottery">Somebody</td>            
+                                <td class="surname-lottery">Somebody</td>            
+                                <td class="email-lottery">test@gmail.com</td>            
+                                <td class="phone-lottery"></td>      
+                                <td><button class="btn btn-info edit-button">Edit</button>  </td>      
+                        </tr>
+                </tbody>
+              </table>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

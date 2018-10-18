@@ -1,0 +1,43 @@
+.error{
+    display:block;
+    font-size: 12px;
+    color: red;
+}
+
+.error-reset{
+    display: none;
+}
+
+.input__field{
+    margin-top: 10px;
+}
+#regForm{
+    margin: 0 auto;
+}
+.winners{
+    width: 500px;
+    height: 165px;
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 60px;
+}
+.winner__text{
+    font-size: 20px;
+    color: lightgreen;
+}
+.edit-btn{
+    display: none;
+}
+.decline-edit-btn{
+    display: none;
+}
+
+.no-display{
+    display: none;
+}
+.display{
+    display: inline-block;
+}
