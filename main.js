@@ -27,17 +27,11 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
         else{
            let lotteryWinner = random(listOfParticipants);
-
-           let arrayListOfParticipants = Array.prototype.slice.call(listOfParticipants);
-
             winnersList.innerHTML = 'Our winner is: ' + '<span class="winner__text">' 
             +lotteryWinner.innerHTML+ '</span>' 
             +'<p>Congrats!</p>';
-            arrayListOfParticipants = arrayListOfParticipants.filter((participant) => {
-                return participant !== lotteryWinner;
-            });
-            listOfParticipants = arrayListOfParticipants;
-            console.log(listOfParticipants)
+
+
         }
     });
 
